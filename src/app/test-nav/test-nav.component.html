@@ -3,11 +3,34 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
+    <mat-toolbar style="background-color: #e8e8e8;">
+        Coucou !
+    </mat-toolbar>
+
     <mat-nav-list>
-      <a mat-list-item href="#" routerLink="/tour">Tour of Heroes</a>
-      <a mat-list-item href="#" routerLink="/upload">Upload to Firebase</a>
-      <a mat-list-item href="#">Link 3</a>
+
+
+      <h2 matSubheader> Bisous </h2>
+
+<!--workaround to automatic selection of the first item of the nav-list-->
+      <a mat-list-item routerLink="/" style="height: 0;"></a>
+
+      <a mat-list-item href="#" routerLink="/tour">
+        <mat-icon matListIcon> android </mat-icon>
+         Tour of Heroes
+      </a>
+
+      <a mat-list-item href="#" routerLink="/upload">
+        <mat-icon matListIcon> local_fire_department </mat-icon>
+         Upload to Firebase</a>
+
+      <mat-divider></mat-divider>
+
+      <h2 matSubheader> Homoto </h2>
+
+      <a mat-list-item href="#">
+        <mat-icon matListIcon> quiz </mat-icon>
+         Link 3</a>
 
     </mat-nav-list>
   </mat-sidenav>
