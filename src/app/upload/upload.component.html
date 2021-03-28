@@ -1,0 +1,9 @@
+    
+	<div>
+		<label for="user-message">Un petit message: </label>
+		<input id="user-message" [(ngModel)]="userMessage" placeholder="userMessage">
+	</div>
+
+    <input type="file" (change)="uploadFile($event)" />
+    <div>{{ uploadPercent | async }}</div>
+    <a [href]="downloadURL | async">{{ downloadURL | async }}</a>

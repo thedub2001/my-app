@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "quickstart-upload": {
+      "hosting": {
+        "my-app": [
+          "quickstart-upload"
+        ]
+      }
+    }
+  }
+}
