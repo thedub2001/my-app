@@ -5,9 +5,10 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
+      <a mat-list-item href="#" routerLink="/tour">Tour of Heroes</a>
+      <a mat-list-item href="#" routerLink="/upload">Upload to Firebase</a>
       <a mat-list-item href="#">Link 3</a>
+
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -31,16 +32,10 @@
 
 
     <!-- Add Content Here -->
-    <h1 id="main-content-header">{{title}}</h1>
 
-    <nav>
-      <a routerLink="/dashboard">Dashboard</a>
-      <a routerLink="/heroes">Heroes</a>
-    </nav>
-    
+
+
     <router-outlet></router-outlet>
-    <app-messages></app-messages>
-
 
   </mat-sidenav-content>
 </mat-sidenav-container>

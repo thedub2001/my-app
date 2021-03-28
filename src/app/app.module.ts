@@ -48,6 +48,7 @@ import { TestMenuComponent } from './test-menu/test-menu.component';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+import { TourComponent } from './tour/tour.component';
 
 
 @NgModule({
@@ -103,7 +104,8 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
     TestDragDropComponent,
     BadgeOverviewExampleComponent,
     TestMenuComponent,
-    UploadComponent
+    UploadComponent,
+    TourComponent
   ],
   bootstrap: [ AppComponent ]
 })

@@ -10,7 +10,6 @@ import { map, shareReplay } from 'rxjs/operators';
 })
 export class TestNavComponent {
 
-	title = 'Tour of Heroes';
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(

@@ -12,7 +12,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 @Injectable({ providedIn: 'root' })
 export class HeroService {
 
-
+  // TO DO : Use firebase Database to get the Hero list !
   private heroesUrl = 'https://thedub2001.github.io/ngtest/heroes.json';  // URL to web api
 
   httpOptions = {
