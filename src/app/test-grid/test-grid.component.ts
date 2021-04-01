@@ -14,6 +14,12 @@ export class TestGridComponent implements OnInit {
 
   heroes: Hero[] = [];
 
+isHandset$= this.breakpointObserver.observe(Breakpoints.Handset)
+    .pipe(
+      map(result => result.matches)
+    );
+
+
   /** Based on the screen size, switch from standard to one column per row */
   cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     map(({ matches }) => {

@@ -40,7 +40,9 @@ import { TestTreeComponent } from './test-tree/test-tree.component';
 import { MatTreeModule } from '@angular/material/tree';
 import { TestDragDropComponent } from './test-drag-drop/test-drag-drop.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import {MatBadgeModule} from '@angular/material/badge';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatDialogModule } from '@angular/material/dialog';
+
 
 import { BadgeOverviewExampleComponent } from './badge-overview-example/badge-overview-example.component';
 import { TestMenuComponent } from './test-menu/test-menu.component';
@@ -49,6 +51,11 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { TourComponent } from './tour/tour.component';
+import { TaradioComponent } from './taradio/taradio.component';
+import { DashtestComponent } from './dashtest/dashtest.component';
+import { DialogWriteComponent } from './dialog-write/dialog-write.component';
+import { EraseMeComponent } from './erase-me/erase-me.component';
+import { DialogContent } from './erase-me/erase-me.component';
 
 
 @NgModule({
@@ -87,7 +94,8 @@ import { TourComponent } from './tour/tour.component';
     DragDropModule,
     MatBadgeModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    MatDialogModule
   ],
   declarations: [
     AppComponent,
@@ -105,8 +113,20 @@ import { TourComponent } from './tour/tour.component';
     BadgeOverviewExampleComponent,
     TestMenuComponent,
     UploadComponent,
-    TourComponent
+    TourComponent,
+    TaradioComponent,
+    DashtestComponent,
+    DialogWriteComponent,
+    EraseMeComponent,
+    DialogContent
   ],
-  bootstrap: [ AppComponent ]
+    entryComponents: [
+    EraseMeComponent
+  ],
+  bootstrap: 
+  [ 
+    AppComponent
+  ]
+
 })
 export class AppModule { }

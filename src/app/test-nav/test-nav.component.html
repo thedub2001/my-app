@@ -1,9 +1,8 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
-    <mat-toolbar style="background-color: #e8e8e8;">
+      mode="side"
+      opened="false" class="mat-elevation-z10">
+    <mat-toolbar style="background-color: #e8e8e8;" >
         Coucou !
     </mat-toolbar>
 
@@ -15,12 +14,12 @@
 <!--workaround to automatic selection of the first item of the nav-list-->
       <a mat-list-item routerLink="/" style="height: 0;"></a>
 
-      <a mat-list-item href="#" routerLink="/tour">
+      <a mat-list-item routerLink="/tour">
         <mat-icon matListIcon> android </mat-icon>
          Tour of Heroes
       </a>
 
-      <a mat-list-item href="#" routerLink="/upload">
+      <a mat-list-item routerLink="/upload">
         <mat-icon matListIcon> local_fire_department </mat-icon>
          Upload to Firebase</a>
 
@@ -28,35 +27,39 @@
 
       <h2 matSubheader> Homoto </h2>
 
-      <a mat-list-item href="#">
-        <mat-icon matListIcon> quiz </mat-icon>
-         Link 3</a>
+      <a mat-list-item routerLink="/taradio">
+        <mat-icon matListIcon> radio </mat-icon>
+         Ta radio</a>
+
+      <a mat-list-item routerLink="/testgrid">
+        <mat-icon matListIcon> view_quilt </mat-icon>
+         Grid test</a>
+
+      <a mat-list-item routerLink="/dashtest">
+        <mat-icon matListIcon> dashboard </mat-icon>
+         Dashboard test</a>
+
+      <a mat-list-item routerLink="/erase">
+        <mat-icon matListIcon> feedback </mat-icon>
+         Dialog test</a>
 
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+    <mat-toolbar color="primary" class="mat-elevation-z10">
       <button
         type="button"
         aria-label="Toggle sidenav"
         mat-icon-button
         (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
+        >
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span>my-app</span>
     </mat-toolbar>
 
-    <!-- test zone -->
-    <!--     
-    <app-upload></app-upload>
-    <app-test-grid> </app-test-grid> 
-    -->
-
 
     <!-- Add Content Here -->
-
-
 
     <router-outlet></router-outlet>
 
