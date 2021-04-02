@@ -3,32 +3,32 @@ import {MatDialog} from '@angular/material/dialog';
 import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-erase-me',
-  templateUrl: './erase-me.component.html',
-  styleUrls: ['./erase-me.component.css']
+  selector: 'app-test-dialog',
+  templateUrl: './test-dialog.component.html',
+  styleUrls: ['./test-dialog.component.css']
 })
-export class EraseMeComponent {
-
+export class TestDialogComponent {
 
   constructor(public dialog: MatDialog) {}
 
 
 
   openDialog() {
-    const dialogRef = this.dialog.open(DialogContentOld);
+    const dialogRef = this.dialog.open(DialogContent);
 
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
     });
   }
+
 }
 
 @Component({
-  selector: 'content',
-  templateUrl: 'content.html',
+  selector: 'dialog-content',
+  templateUrl: 'dialog-content.html',
 })
 
-export class DialogContentOld {
+export class DialogContent {
 
   constructor(private fb: FormBuilder) {}
 

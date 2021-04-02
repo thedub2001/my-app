@@ -17,7 +17,8 @@
           </mat-card-title>
 
         </mat-card-header>
-        <div class="image-container" routerLink="/testgrid" style="cursor:pointer">
+<!--         <div class="image-container" routerLink="/testgrid"  style="cursor:pointer"> -->
+        <div class="image-container" style="cursor:pointer" (click)="openDialog(action.name)">          
           <img mat-card-image src={{action.icon}} style="height:200px;width:auto;">
         </div>
 

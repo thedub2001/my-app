@@ -52,10 +52,15 @@ import { environment } from '../environments/environment';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { TourComponent } from './tour/tour.component';
 import { TaradioComponent } from './taradio/taradio.component';
+import { DialogWriteContent } from './taradio/taradio.component';
+import { DialogFileContent } from './taradio/taradio.component';
+import { DialogRecordContent } from './taradio/taradio.component';
 import { DashtestComponent } from './dashtest/dashtest.component';
-import { DialogWriteComponent } from './dialog-write/dialog-write.component';
 import { EraseMeComponent } from './erase-me/erase-me.component';
-import { DialogContent } from './erase-me/erase-me.component';
+import { DialogContentOld } from './erase-me/erase-me.component';
+import { DialogContent } from './test-dialog/test-dialog.component';
+import { TestDialogComponent } from './test-dialog/test-dialog.component';
+import { TrackListComponent } from './track-list/track-list.component';
 
 
 @NgModule({
@@ -115,13 +120,20 @@ import { DialogContent } from './erase-me/erase-me.component';
     UploadComponent,
     TourComponent,
     TaradioComponent,
+    DialogWriteContent,
+    DialogFileContent,
+    DialogRecordContent,
     DashtestComponent,
-    DialogWriteComponent,
     EraseMeComponent,
-    DialogContent
+    DialogContentOld,
+    DialogContent,
+    TestDialogComponent,
+    TrackListComponent
   ],
     entryComponents: [
-    EraseMeComponent
+    EraseMeComponent,
+    TestDialogComponent,
+    TaradioComponent
   ],
   bootstrap: 
   [ 

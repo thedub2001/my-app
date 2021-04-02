@@ -8,9 +8,11 @@ import { TourComponent } from './tour/tour.component';
 import { UploadComponent } from './upload/upload.component';
 import { TaradioComponent } from './taradio/taradio.component';
 import { TestGridComponent } from './test-grid/test-grid.component';
+import { TestTableComponent } from './test-table/test-table.component';
 import { DashtestComponent } from './dashtest/dashtest.component';
-import { DialogWriteComponent } from './dialog-write/dialog-write.component';
 import { EraseMeComponent } from './erase-me/erase-me.component';
+import { TestDialogComponent } from './test-dialog/test-dialog.component';
+import { TrackListComponent } from './track-list/track-list.component';
 
 
 /*{ path: '', redirectTo: '/tour', pathMatch: 'full' },
@@ -26,6 +28,8 @@ import { EraseMeComponent } from './erase-me/erase-me.component';
   { path: 'taradio', component: TaradioComponent },
   { path: 'testgrid', component: TestGridComponent },
   { path: 'dashtest', component: DashtestComponent },
+  { path: 'dialogtest', component: TestDialogComponent },
+  { path: 'tracklist', component: TestTableComponent },
   { path: 'erase', component: EraseMeComponent }
   
 
